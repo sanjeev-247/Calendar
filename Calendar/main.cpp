@@ -29,6 +29,11 @@ int main() {
     cout<<"Enter month & year(e.g., AUG 2022): ";
     cin>>month>>year;
 
+    for(int i = 0; i < month.size(); i++){
+        month[i] = toupper(month[i]);
+        cout<<"month["<<i<<"] = "<<month[i]<<endl;
+    }
+    
     int K = year % 100;
     int J = year / 100;
     int m = 1;  //m is month number, accord. to zeller's rule, not same as conventional month number.
